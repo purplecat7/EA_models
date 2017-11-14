@@ -1,0 +1,2131 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" name="HovmeollerPlot" visibility="public">
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" name="Calculate Y axis of the returned plot." visibility="public" isReadOnly="false" isSingleExecution="false">
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003" name="Calcualte time gaps between coordinate values on the time axis." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_07FB27C9_80A9_4e83_9A1F_49826B6D39FE" visibility="public" source="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003" target="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3" name="Calculat the highest common factor of Hovmoeller cells." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_B1A31AE2_1238_4c84_8F6C_4BA7CF6A2D3C" visibility="public" source="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3" target="EAID_2662BA81_179D_45ab_A676_109433190B38"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8" name="Calculate the exent on Y axis that the plot should cover." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_DEA45AA4_882A_47be_8A70_C78813B75A77" visibility="public" source="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8" target="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3" name="Calculate time gaps between mid positions of coordinate values (Hovmoeller cells) on the time axis." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_9DC8790C_030F_4a92_A0E1_D2B5346E5A1A" visibility="public" source="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3" target="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_2662BA81_179D_45ab_A676_109433190B38" name="Convert the height values of Hovmoeller cells as values which are multiple of their highest common factor." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_6A671DF7_40C5_4f73_910A_212B88489CA0" visibility="public" source="EAID_2662BA81_179D_45ab_A676_109433190B38" target="EAID_2A96E0CE_C3C6_4647_A3D9_2E71B0FCEB88"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_76BF4CEC_45AA_4045_8258_F8E3B0928F21" visibility="public" source="EAID_2662BA81_179D_45ab_A676_109433190B38" target="EAID_173B4721_2A2D_4376_8873_28A25118B0DC"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_AC644B18_B7A9_4e21_88B3_5E0B3F28EE3F" visibility="public" source="EAID_2662BA81_179D_45ab_A676_109433190B38" target="EAID_610EACEB_5306_4d0b_9630_7FEA6CBC69E6"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0" name="Get the time values on the time axis." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_7F2AB43C_42B6_48f0_B4F0_1DE257B3C3C8" visibility="public" source="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0" target="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003"/>
+				<node xmi:type="uml:FlowFinalNode" xmi:id="EAID_173B4721_2A2D_4376_8873_28A25118B0DC" name="FlowFinal" visibility="public">
+					<incoming xmi:idref="EAID_76BF4CEC_45AA_4045_8258_F8E3B0928F21"/>
+				</node>
+				<node xmi:type="uml:ActivityFinalNode" xmi:id="EAID_610EACEB_5306_4d0b_9630_7FEA6CBC69E6" name="Finish." visibility="public">
+					<incoming xmi:idref="EAID_AC644B18_B7A9_4e21_88B3_5E0B3F28EE3F"/>
+				</node>
+				<node xmi:type="uml:ActivityFinalNode" xmi:id="EAID_2A96E0CE_C3C6_4647_A3D9_2E71B0FCEB88" name="Finsih." visibility="public">
+					<incoming xmi:idref="EAID_6A671DF7_40C5_4f73_910A_212B88489CA0"/>
+				</node>
+				<node xmi:type="uml:InitialNode" xmi:id="EAID_0AD708A0_702D_4b29_948F_DF00822E1425" name="Start" visibility="public">
+					<outgoing xmi:idref="EAID_28AFA04F_D4BD_4d4b_83BC_558E4334B255"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_28AFA04F_D4BD_4d4b_83BC_558E4334B255" visibility="public" source="EAID_0AD708A0_702D_4b29_948F_DF00822E1425" target="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0"/>
+			</packagedElement>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_FBD60878_C069_4065_ACF9_722E4E4BA2D3" visibility="public" source="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" target="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" name="Calculate the X axis of the returned plot." visibility="public" isReadOnly="false" isSingleExecution="false">
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_01B991EA_503B_4327_B1E9_9B3659231175" name="Calculate distances between line string control points as proportion of whole" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_0FB6D418_B4C6_41a6_A99A_5B95EE2D3AD4" visibility="public" source="EAID_01B991EA_503B_4327_B1E9_9B3659231175" target="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E" name="Calculate distances between mid points" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_6DAD3543_D3CE_41ee_9A3A_4DA637245BC9" visibility="public" source="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E" target="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665" name="Calculate mid point of each segment" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_DEAF8C53_8FFA_493f_9436_4C194D46AB14" visibility="public" source="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665" target="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA" name="Find minimum of the distances" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_9EEF652E_0F70_44ac_8B1E_BE359BB0350F" visibility="public" source="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA" target="EAID_224B46A2_C19F_40fe_940C_F981855D042B"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC" name="Muliply all distances by 10000" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_0B02DB44_CECE_4cb7_9735_A75E0A0D3AA5" visibility="public" source="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC" target="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_85E54EB6_658E_486b_B574_0064BD2617A3" name="Multiply all distances by 100" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_B01F81E5_EC60_400c_A15A_79C65AF61522" visibility="public" source="EAID_85E54EB6_658E_486b_B574_0064BD2617A3" target="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651" name="Multiply all distances by 1000" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_833FA37E_54B3_47f7_AA45_50986B4B5DC3" visibility="public" source="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651" target="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE" name="Set tick unit on x axis to 25" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_E56E6DB4_DD06_4793_B1D6_ACCC2220759A" visibility="public" source="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE" target="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12" name="Set tick unit on x axis to 250" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_D0B5EB56_0AA4_4561_9A8E_1E3437E749D0" visibility="public" source="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12" target="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+				<packagedElement xmi:type="uml:Activity" xmi:id="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20" name="Set tick unit on x axis to 2500" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_C187CED6_B6D8_45e2_BC3F_F67C83C3DA40" visibility="public" source="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20" target="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+				<node xmi:type="uml:FlowFinalNode" xmi:id="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796" name="FlowFinal" visibility="public">
+					<incoming xmi:idref="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0"/>
+				</node>
+				<node xmi:type="uml:DecisionNode" xmi:id="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622" name="Minimum distance &gt; 0.0001" visibility="public">
+					<incoming xmi:idref="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C"/>
+					<outgoing xmi:idref="EAID_105529C8_D671_4fe0_94FD_01B7E4FFCC5A"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_105529C8_D671_4fe0_94FD_01B7E4FFCC5A" name="Yes" visibility="public" source="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622" target="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC"/>
+				<node xmi:type="uml:DecisionNode" xmi:id="EAID_224B46A2_C19F_40fe_940C_F981855D042B" name="Minimum distance &gt; 0.01" visibility="public">
+					<incoming xmi:idref="EAID_9EEF652E_0F70_44ac_8B1E_BE359BB0350F"/>
+					<outgoing xmi:idref="EAID_BC924E34_801B_46b7_BFC9_6F0F84D3F93C"/>
+					<outgoing xmi:idref="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895" visibility="public" source="EAID_224B46A2_C19F_40fe_940C_F981855D042B" target="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_BC924E34_801B_46b7_BFC9_6F0F84D3F93C" name="Yes" visibility="public" source="EAID_224B46A2_C19F_40fe_940C_F981855D042B" target="EAID_85E54EB6_658E_486b_B574_0064BD2617A3"/>
+				<node xmi:type="uml:DecisionNode" xmi:id="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" name="Minimum distance &gt;0.001" visibility="public">
+					<incoming xmi:idref="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895"/>
+					<outgoing xmi:idref="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C"/>
+					<outgoing xmi:idref="EAID_1A1B730E_2ED7_4deb_8803_A677847C1CC5"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_1A1B730E_2ED7_4deb_8803_A677847C1CC5" name="Yes" visibility="public" source="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" target="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651"/>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C" visibility="public" source="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" target="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622"/>
+				<node xmi:type="uml:InitialNode" xmi:id="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9" name="Start" visibility="public">
+					<outgoing xmi:idref="EAID_2A3C77D9_54C3_4887_96B3_9B46155AEA42"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_2A3C77D9_54C3_4887_96B3_9B46155AEA42" visibility="public" source="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9" target="EAID_01B991EA_503B_4327_B1E9_9B3659231175"/>
+			</packagedElement>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_72C07FD2_32C3_43bd_9908_CA3653F9BB25" visibility="public" source="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" target="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4" name="Do Plot" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_6296CBC9_768B_4db9_B701_CC506AFF1558" visibility="public" source="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4" target="EAID_95DC6850_836D_432a_9767_E0FED941326C"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4" name="Generate number axis (x-axis) and date axis (y-axis)." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_7FCA13FA_0C23_4f97_AB42_D24246837657" visibility="public" source="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4" target="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_2C737D42_9035_4f48_9D0F_D79CB58FC93F" name="Get data from the given Hovmoeller feature. " visibility="public" isReadOnly="false" isSingleExecution="false"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" name="Get feature data from the given Hovmoeller feature." visibility="public" isReadOnly="false" isSingleExecution="false">
+				<node xmi:type="uml:ObjectNode" xmi:id="EAID_2097D67E_4167_4aa2_A418_EA459D80300D" name="ObjectNode1" visibility="public" ordering="FIFO"/>
+			</packagedElement>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_9ECDB863_91C7_439f_900D_0D347D1F53B8" visibility="public" source="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" target="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_40C76836_9750_4dd7_85EC_125B928FC92F" name="Get the line string details from the given Hovmoeller feature." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_FC1BCFFC_B7BC_407d_A2B0_1CFF89BF1E5E" visibility="public" source="EAID_40C76836_9750_4dd7_85EC_125B928FC92F" target="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA" name="Get the times values on the time axis from the given Hovmoeller feature." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_608A7E90_CD2B_4db0_84E5_AF771502AAAD" visibility="public" source="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA" target="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" name="Manipulate data reflecting various widths and heights of Hovmoeller cells," visibility="public" isReadOnly="false" isSingleExecution="false">
+				<node xmi:type="uml:FlowFinalNode" xmi:id="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB" name="FlowFinal" visibility="public">
+					<incoming xmi:idref="EAID_E9DADAA0_869F_4fee_AB01_53F8F708DBC8"/>
+				</node>
+				<node xmi:type="uml:InitialNode" xmi:id="EAID_B2C56715_9098_480f_8858_D3F66F243A41" name="ActivityInitial" visibility="public">
+					<outgoing xmi:idref="EAID_D76618E9_15A8_4683_9AFE_2F4A4EC0400E"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_D76618E9_15A8_4683_9AFE_2F4A4EC0400E" visibility="public" source="EAID_B2C56715_9098_480f_8858_D3F66F243A41" target="EAID_18367A7A_3917_455b_957F_2D413FF91C6C"/>
+				<group xmi:type="uml:ExpansionRegion" xmi:id="EAID_81BE1E6F_D8F7_4fdf_9B3D_423B5E06429A" name="for each linestring element" visibility="public" mode="iterative">
+					<packagedElement xmi:type="uml:Activity" xmi:id="EAID_18367A7A_3917_455b_957F_2D413FF91C6C" name="repeat data horizontally  for each unit it has been multplied up to" visibility="public" isReadOnly="false" isSingleExecution="false"/>
+					<containedEdge xmi:type="uml:ControlFlow" xmi:id="EAID_5EF9BD9F_A0F6_4e81_AFC0_1A7A340B9311" visibility="public" source="EAID_18367A7A_3917_455b_957F_2D413FF91C6C" target="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C"/>
+					<packagedElement xmi:type="uml:Activity" xmi:id="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C" name="repeat data vertically for multple of units." visibility="public" isReadOnly="false" isSingleExecution="false"/>
+					<containedEdge xmi:type="uml:ControlFlow" xmi:id="EAID_E9DADAA0_869F_4fee_AB01_53F8F708DBC8" visibility="public" source="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C" target="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB"/>
+				</group>
+			</packagedElement>
+			<edge xmi:type="uml:ControlFlow" xmi:id="EAID_B4E861D0_8E5D_424d_8A37_BF3BC3C1D880" visibility="public" source="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" target="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4"/>
+			<packagedElement xmi:type="uml:Activity" xmi:id="EAID_AC000001_127A_4244_95C9_22739098CF43" name="EA_Activity1" visibility="public">
+				<node xmi:type="uml:ActivityFinalNode" xmi:id="EAID_95DC6850_836D_432a_9767_E0FED941326C" name="ActivityFinal" visibility="public">
+					<incoming xmi:idref="EAID_6296CBC9_768B_4db9_B701_CC506AFF1558"/>
+				</node>
+				<node xmi:type="uml:InitialNode" xmi:id="EAID_1176643E_51E3_4401_8FD2_21E6C2296493" name="Start" visibility="public">
+					<outgoing xmi:idref="EAID_A9B1BB2D_C249_495c_820D_1C3ED4EBAB7D"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_A9B1BB2D_C249_495c_820D_1C3ED4EBAB7D" visibility="public" source="EAID_1176643E_51E3_4401_8FD2_21E6C2296493" target="EAID_40C76836_9750_4dd7_85EC_125B928FC92F"/>
+				<node xmi:type="uml:ForkNode" xmi:id="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881" visibility="public">
+					<incoming xmi:idref="EAID_E56E6DB4_DD06_4793_B1D6_ACCC2220759A"/>
+					<incoming xmi:idref="EAID_D0B5EB56_0AA4_4561_9A8E_1E3437E749D0"/>
+					<incoming xmi:idref="EAID_C187CED6_B6D8_45e2_BC3F_F67C83C3DA40"/>
+					<outgoing xmi:idref="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0"/>
+				</node>
+				<edge xmi:type="uml:ControlFlow" xmi:id="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0" visibility="public" source="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881" target="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796"/>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" xmi:type="uml:Package" name="HovmeollerPlot" scope="public">
+				<model package2="EAID_E4DD5EFE_127A_4244_95C9_22739098CF43" package="EAPK_69A1CD8C_5948_4bcb_9072_10176D034D6F" tpos="0" ea_localid="399" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2015-06-02 16:22:39" modified="2015-06-02 16:22:39" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="ReSC_Model"/>
+				<packageproperties version="1.0" xmiver="Enterprise Architect XMI/UML 1.3" tpos="0"/>
+				<paths xmlpath="EDAL_HovmeollerPlot.xml"/>
+				<times created="2014-11-03 10:53:14" modified="2014-11-03 10:53:14" lastloaddate="2015-06-02 16:22:42" lastsavedate="2015-06-02 16:22:39"/>
+				<flags iscontrolled="TRUE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE" packageFlags="Recurse=0;VCCFG=ReSC_SVN_sweeney;"/>
+			</element>
+			<element xmi:idref="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" xmi:type="uml:Activity" name="Calculate Y axis of the returned plot." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3515" ea_eleType="element"/>
+				<properties documentation="Based on the times values." isSpecification="false" sType="Activity" nType="8" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:20:46" modified="2014-11-03 12:32:14" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot" diagram="EAID_1CC103E2_850E_4a8a_A39D_08CB3ABAF7F4"/>
+				<links>
+					<ControlFlow xmi:id="EAID_FBD60878_C069_4065_ACF9_722E4E4BA2D3" start="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" end="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62"/>
+					<ControlFlow xmi:id="EAID_72C07FD2_32C3_43bd_9908_CA3653F9BB25" start="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" end="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003" xmi:type="uml:Activity" name="Calcualte time gaps between coordinate values on the time axis." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3523" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:04:56" modified="2014-11-03 15:06:23" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_07FB27C9_80A9_4e83_9A1F_49826B6D39FE" start="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003" end="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3"/>
+					<ControlFlow xmi:id="EAID_7F2AB43C_42B6_48f0_B4F0_1DE257B3C3C8" start="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0" end="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3" xmi:type="uml:Activity" name="Calculat the highest common factor of Hovmoeller cells." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3530" ea_eleType="element"/>
+				<properties documentation="This value would work as the height unit of Hovmoeller cells." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:11:49" modified="2014-11-03 15:40:43" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_B1A31AE2_1238_4c84_8F6C_4BA7CF6A2D3C" start="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3" end="EAID_2662BA81_179D_45ab_A676_109433190B38"/>
+					<ControlFlow xmi:id="EAID_DEA45AA4_882A_47be_8A70_C78813B75A77" start="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8" end="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8" xmi:type="uml:Activity" name="Calculate the exent on Y axis that the plot should cover." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3528" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:09:05" modified="2014-11-03 15:11:25" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_DEA45AA4_882A_47be_8A70_C78813B75A77" start="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8" end="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3"/>
+					<ControlFlow xmi:id="EAID_9DC8790C_030F_4a92_A0E1_D2B5346E5A1A" start="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3" end="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3" xmi:type="uml:Activity" name="Calculate time gaps between mid positions of coordinate values (Hovmoeller cells) on the time axis." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3512" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:36:20" modified="2014-11-03 15:39:16" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_9DC8790C_030F_4a92_A0E1_D2B5346E5A1A" start="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3" end="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8"/>
+					<ControlFlow xmi:id="EAID_07FB27C9_80A9_4e83_9A1F_49826B6D39FE" start="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003" end="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_2662BA81_179D_45ab_A676_109433190B38" xmi:type="uml:Activity" name="Convert the height values of Hovmoeller cells as values which are multiple of their highest common factor." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3508" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:14:51" modified="2014-11-03 15:42:44" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6A671DF7_40C5_4f73_910A_212B88489CA0" start="EAID_2662BA81_179D_45ab_A676_109433190B38" end="EAID_2A96E0CE_C3C6_4647_A3D9_2E71B0FCEB88"/>
+					<ControlFlow xmi:id="EAID_76BF4CEC_45AA_4045_8258_F8E3B0928F21" start="EAID_2662BA81_179D_45ab_A676_109433190B38" end="EAID_173B4721_2A2D_4376_8873_28A25118B0DC"/>
+					<ControlFlow xmi:id="EAID_AC644B18_B7A9_4e21_88B3_5E0B3F28EE3F" start="EAID_2662BA81_179D_45ab_A676_109433190B38" end="EAID_610EACEB_5306_4d0b_9630_7FEA6CBC69E6"/>
+					<ControlFlow xmi:id="EAID_B1A31AE2_1238_4c84_8F6C_4BA7CF6A2D3C" start="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3" end="EAID_2662BA81_179D_45ab_A676_109433190B38"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0" xmi:type="uml:Activity" name="Get the time values on the time axis." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3504" ea_eleType="element"/>
+				<properties documentation="The plot will cover the range of this extent." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 12:32:48" modified="2014-11-03 13:45:01" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_7F2AB43C_42B6_48f0_B4F0_1DE257B3C3C8" start="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0" end="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003"/>
+					<ControlFlow xmi:id="EAID_28AFA04F_D4BD_4d4b_83BC_558E4334B255" start="EAID_0AD708A0_702D_4b29_948F_DF00822E1425" end="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_173B4721_2A2D_4376_8873_28A25118B0DC" xmi:type="uml:StateNode" name="FlowFinal" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3502" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="102" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:27:38" modified="2014-11-03 15:27:38" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_76BF4CEC_45AA_4045_8258_F8E3B0928F21" start="EAID_2662BA81_179D_45ab_A676_109433190B38" end="EAID_173B4721_2A2D_4376_8873_28A25118B0DC"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_610EACEB_5306_4d0b_9630_7FEA6CBC69E6" xmi:type="uml:StateNode" name="Finish." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3517" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="101" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:19:24" modified="2014-11-03 15:19:32" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_AC644B18_B7A9_4e21_88B3_5E0B3F28EE3F" start="EAID_2662BA81_179D_45ab_A676_109433190B38" end="EAID_610EACEB_5306_4d0b_9630_7FEA6CBC69E6"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_2A96E0CE_C3C6_4647_A3D9_2E71B0FCEB88" xmi:type="uml:StateNode" name="Finsih." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3509" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="101" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 15:18:43" modified="2014-11-03 15:18:53" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6A671DF7_40C5_4f73_910A_212B88489CA0" start="EAID_2662BA81_179D_45ab_A676_109433190B38" end="EAID_2A96E0CE_C3C6_4647_A3D9_2E71B0FCEB88"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_0AD708A0_702D_4b29_948F_DF00822E1425" xmi:type="uml:StateNode" name="Start" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" tpos="0" ea_localid="3498" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="100" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 12:32:21" modified="2014-11-03 12:32:34" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_28AFA04F_D4BD_4d4b_83BC_558E4334B255" start="EAID_0AD708A0_702D_4b29_948F_DF00822E1425" end="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" xmi:type="uml:Activity" name="Calculate the X axis of the returned plot." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3510" ea_eleType="element"/>
+				<properties documentation="Based on the line string details." isSpecification="false" sType="Activity" nType="8" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:10:25" modified="2014-11-03 12:31:09" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot" diagram="EAID_DE15CFE4_F7C7_4b32_A950_B83016DBEE39"/>
+				<links>
+					<ControlFlow xmi:id="EAID_72C07FD2_32C3_43bd_9908_CA3653F9BB25" start="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" end="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA"/>
+					<ControlFlow xmi:id="EAID_608A7E90_CD2B_4db0_84E5_AF771502AAAD" start="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA" end="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_01B991EA_503B_4327_B1E9_9B3659231175" xmi:type="uml:Activity" name="Calculate distances between line string control points as proportion of whole" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3496" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:01:42" modified="2014-11-03 12:23:38" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_0FB6D418_B4C6_41a6_A99A_5B95EE2D3AD4" start="EAID_01B991EA_503B_4327_B1E9_9B3659231175" end="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665"/>
+					<ControlFlow xmi:id="EAID_2A3C77D9_54C3_4887_96B3_9B46155AEA42" start="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9" end="EAID_01B991EA_503B_4327_B1E9_9B3659231175"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E" xmi:type="uml:Activity" name="Calculate distances between mid points" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3531" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:04:05" modified="2014-11-03 12:24:49" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6DAD3543_D3CE_41ee_9A3A_4DA637245BC9" start="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E" end="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA"/>
+					<ControlFlow xmi:id="EAID_DEAF8C53_8FFA_493f_9436_4C194D46AB14" start="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665" end="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665" xmi:type="uml:Activity" name="Calculate mid point of each segment" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3526" ea_eleType="element"/>
+				<properties documentation="Except: for an end point, there is no midpoint extending beyond it, therefore it is treated as a midpoint for further calculations." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:03:18" modified="2014-11-03 11:24:01" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_DEAF8C53_8FFA_493f_9436_4C194D46AB14" start="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665" end="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E"/>
+					<ControlFlow xmi:id="EAID_0FB6D418_B4C6_41a6_A99A_5B95EE2D3AD4" start="EAID_01B991EA_503B_4327_B1E9_9B3659231175" end="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA" xmi:type="uml:Activity" name="Find minimum of the distances" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3513" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:08:39" modified="2014-11-03 11:24:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_9EEF652E_0F70_44ac_8B1E_BE359BB0350F" start="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA" end="EAID_224B46A2_C19F_40fe_940C_F981855D042B"/>
+					<ControlFlow xmi:id="EAID_6DAD3543_D3CE_41ee_9A3A_4DA637245BC9" start="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E" end="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC" xmi:type="uml:Activity" name="Muliply all distances by 10000" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3516" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:15:03" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_0B02DB44_CECE_4cb7_9735_A75E0A0D3AA5" start="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC" end="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20"/>
+					<ControlFlow xmi:id="EAID_105529C8_D671_4fe0_94FD_01B7E4FFCC5A" start="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622" end="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_85E54EB6_658E_486b_B574_0064BD2617A3" xmi:type="uml:Activity" name="Multiply all distances by 100" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3520" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:11:17" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_B01F81E5_EC60_400c_A15A_79C65AF61522" start="EAID_85E54EB6_658E_486b_B574_0064BD2617A3" end="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE"/>
+					<ControlFlow xmi:id="EAID_BC924E34_801B_46b7_BFC9_6F0F84D3F93C" start="EAID_224B46A2_C19F_40fe_940C_F981855D042B" end="EAID_85E54EB6_658E_486b_B574_0064BD2617A3"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651" xmi:type="uml:Activity" name="Multiply all distances by 1000" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3535" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:12:43" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_833FA37E_54B3_47f7_AA45_50986B4B5DC3" start="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651" end="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12"/>
+					<ControlFlow xmi:id="EAID_1A1B730E_2ED7_4deb_8803_A677847C1CC5" start="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" end="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE" xmi:type="uml:Activity" name="Set tick unit on x axis to 25" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3537" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:16:31" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_E56E6DB4_DD06_4793_B1D6_ACCC2220759A" start="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE" end="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+					<ControlFlow xmi:id="EAID_B01F81E5_EC60_400c_A15A_79C65AF61522" start="EAID_85E54EB6_658E_486b_B574_0064BD2617A3" end="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12" xmi:type="uml:Activity" name="Set tick unit on x axis to 250" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3518" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:16:58" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_D0B5EB56_0AA4_4561_9A8E_1E3437E749D0" start="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12" end="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+					<ControlFlow xmi:id="EAID_833FA37E_54B3_47f7_AA45_50986B4B5DC3" start="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651" end="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20" xmi:type="uml:Activity" name="Set tick unit on x axis to 2500" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3507" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:17:05" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_C187CED6_B6D8_45e2_BC3F_F67C83C3DA40" start="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20" end="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+					<ControlFlow xmi:id="EAID_0B02DB44_CECE_4cb7_9735_A75E0A0D3AA5" start="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC" end="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796" xmi:type="uml:StateNode" name="FlowFinal" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3506" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="102" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:17:47" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0" start="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881" end="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622" xmi:type="uml:Decision" name="Minimum distance &gt; 0.0001" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3521" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:14:38" modified="2014-11-03 12:27:01" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_105529C8_D671_4fe0_94FD_01B7E4FFCC5A" start="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622" end="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC"/>
+					<ControlFlow xmi:id="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C" start="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" end="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_224B46A2_C19F_40fe_940C_F981855D042B" xmi:type="uml:Decision" name="Minimum distance &gt; 0.01" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3505" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:12:18" modified="2014-11-03 11:20:14" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895" start="EAID_224B46A2_C19F_40fe_940C_F981855D042B" end="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402"/>
+					<ControlFlow xmi:id="EAID_BC924E34_801B_46b7_BFC9_6F0F84D3F93C" start="EAID_224B46A2_C19F_40fe_940C_F981855D042B" end="EAID_85E54EB6_658E_486b_B574_0064BD2617A3"/>
+					<ControlFlow xmi:id="EAID_9EEF652E_0F70_44ac_8B1E_BE359BB0350F" start="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA" end="EAID_224B46A2_C19F_40fe_940C_F981855D042B"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" xmi:type="uml:Decision" name="Minimum distance &gt;0.001" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3499" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Decision" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:14:06" modified="2014-11-03 12:26:00" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_1A1B730E_2ED7_4deb_8803_A677847C1CC5" start="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" end="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651"/>
+					<ControlFlow xmi:id="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C" start="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" end="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622"/>
+					<ControlFlow xmi:id="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895" start="EAID_224B46A2_C19F_40fe_940C_F981855D042B" end="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9" xmi:type="uml:StateNode" name="Start" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" tpos="0" ea_localid="3525" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="100" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:11:09" modified="2014-11-03 11:19:05" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_2A3C77D9_54C3_4887_96B3_9B46155AEA42" start="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9" end="EAID_01B991EA_503B_4327_B1E9_9B3659231175"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4" xmi:type="uml:Activity" name="Do Plot" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3497" ea_eleType="element"/>
+				<properties documentation="Send JFreeChart axes, the manipulated data, the colour scheme, and copyright statement to JFreeChart to generate plot object." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:36:48" modified="2014-11-03 15:34:06" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6296CBC9_768B_4db9_B701_CC506AFF1558" start="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4" end="EAID_95DC6850_836D_432a_9767_E0FED941326C"/>
+					<ControlFlow xmi:id="EAID_7FCA13FA_0C23_4f97_AB42_D24246837657" start="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4" end="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4" xmi:type="uml:Activity" name="Generate number axis (x-axis) and date axis (y-axis)." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3524" ea_eleType="element"/>
+				<properties documentation="Send  X and Y axes details (receive from previous activities) to JFreeChart to generate axes." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:33:36" modified="2014-11-03 15:32:24" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_7FCA13FA_0C23_4f97_AB42_D24246837657" start="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4" end="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4"/>
+					<ControlFlow xmi:id="EAID_B4E861D0_8E5D_424d_8A37_BF3BC3C1D880" start="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" end="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_2C737D42_9035_4f48_9D0F_D79CB58FC93F" xmi:type="uml:Activity" name="Get data from the given Hovmoeller feature. " scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3511" ea_eleType="element"/>
+				<properties documentation="These data need to be plotted." isSpecification="false" sType="Activity" nType="8" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 12:05:15" modified="2014-11-03 12:07:01" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot" diagram="EAID_E03A8F51_E4F9_4f64_B3CD_9F5F4ED354E6"/>
+			</element>
+			<element xmi:idref="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" xmi:type="uml:Activity" name="Get feature data from the given Hovmoeller feature." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3527" ea_eleType="element"/>
+				<properties documentation="These data need to be plotted." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 12:07:13" modified="2014-11-03 15:45:59" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_9ECDB863_91C7_439f_900D_0D347D1F53B8" start="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" end="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7"/>
+					<ControlFlow xmi:id="EAID_FBD60878_C069_4065_ACF9_722E4E4BA2D3" start="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" end="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_2097D67E_4167_4aa2_A418_EA459D80300D" xmi:type="uml:ObjectNode" name="ObjectNode1" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" tpos="0" ea_localid="3495" ea_eleType="element"/>
+				<properties isSpecification="false" sType="ObjectNode" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 12:11:15" modified="2014-11-03 12:11:15" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+			</element>
+			<element xmi:idref="EAID_40C76836_9750_4dd7_85EC_125B928FC92F" xmi:type="uml:Activity" name="Get the line string details from the given Hovmoeller feature." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3514" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 10:55:48" modified="2014-11-03 12:13:48" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_FC1BCFFC_B7BC_407d_A2B0_1CFF89BF1E5E" start="EAID_40C76836_9750_4dd7_85EC_125B928FC92F" end="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA"/>
+					<ControlFlow xmi:id="EAID_A9B1BB2D_C249_495c_820D_1C3ED4EBAB7D" start="EAID_1176643E_51E3_4401_8FD2_21E6C2296493" end="EAID_40C76836_9750_4dd7_85EC_125B928FC92F"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA" xmi:type="uml:Activity" name="Get the times values on the time axis from the given Hovmoeller feature." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3534" ea_eleType="element"/>
+				<properties documentation="Create line string and get time axis information" isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 10:57:15" modified="2014-11-03 12:15:10" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_608A7E90_CD2B_4db0_84E5_AF771502AAAD" start="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA" end="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4"/>
+					<ControlFlow xmi:id="EAID_FC1BCFFC_B7BC_407d_A2B0_1CFF89BF1E5E" start="EAID_40C76836_9750_4dd7_85EC_125B928FC92F" end="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" xmi:type="uml:Activity" name="Manipulate data reflecting various widths and heights of Hovmoeller cells," scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3501" ea_eleType="element"/>
+				<properties documentation="Pad data to fill up gaps" isSpecification="false" sType="Activity" nType="8" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:25:24" modified="2014-11-03 15:22:40" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot" diagram="EAID_49C4A1DD_B3C0_4467_B6A4_9980B32CE8B7"/>
+				<links>
+					<ControlFlow xmi:id="EAID_B4E861D0_8E5D_424d_8A37_BF3BC3C1D880" start="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" end="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4"/>
+					<ControlFlow xmi:id="EAID_9ECDB863_91C7_439f_900D_0D347D1F53B8" start="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" end="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB" xmi:type="uml:StateNode" name="FlowFinal" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" tpos="0" ea_localid="3536" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="102" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:32:33" modified="2014-11-03 11:32:33" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_E9DADAA0_869F_4fee_AB01_53F8F708DBC8" start="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C" end="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_B2C56715_9098_480f_8858_D3F66F243A41" xmi:type="uml:StateNode" name="ActivityInitial" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" tpos="0" ea_localid="3529" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="100" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:28:26" modified="2014-11-03 11:28:26" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_D76618E9_15A8_4683_9AFE_2F4A4EC0400E" start="EAID_B2C56715_9098_480f_8858_D3F66F243A41" end="EAID_18367A7A_3917_455b_957F_2D413FF91C6C"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_81BE1E6F_D8F7_4fdf_9B3D_423B5E06429A" xmi:type="uml:ExpansionRegion" name="for each linestring element" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" tpos="0" ea_localid="3519" ea_eleType="element"/>
+				<properties isSpecification="false" sType="ExpansionRegion" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:28:50" modified="2014-11-03 11:31:40" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={F9826E47-E8E7-43bd-8A72-2E7C1B219482}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=mode@ENDNAME;@TYPE=ExpansionKind@ENDTYPE;@VALU=iterative@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={81BE1E6F-D8F7-4fdf-9B3D-423B5E06429A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+			</element>
+			<element xmi:idref="EAID_18367A7A_3917_455b_957F_2D413FF91C6C" xmi:type="uml:Activity" name="repeat data horizontally  for each unit it has been multplied up to" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_81BE1E6F_D8F7_4fdf_9B3D_423B5E06429A" tpos="0" ea_localid="3503" ea_eleType="element"/>
+				<properties documentation="This is the number calculated from the midpoint distances and then suitably multiplied up during X/Y axis activity." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:29:14" modified="2014-11-03 11:32:14" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_5EF9BD9F_A0F6_4e81_AFC0_1A7A340B9311" start="EAID_18367A7A_3917_455b_957F_2D413FF91C6C" end="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C"/>
+					<ControlFlow xmi:id="EAID_D76618E9_15A8_4683_9AFE_2F4A4EC0400E" start="EAID_B2C56715_9098_480f_8858_D3F66F243A41" end="EAID_18367A7A_3917_455b_957F_2D413FF91C6C"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C" xmi:type="uml:Activity" name="repeat data vertically for multple of units." scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" owner="EAID_81BE1E6F_D8F7_4fdf_9B3D_423B5E06429A" tpos="0" ea_localid="3532" ea_eleType="element"/>
+				<properties documentation="The unit is the highest common factor of time gaps." isSpecification="false" sType="Activity" nType="0" scope="public" isAbstract="false"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:32:17" modified="2014-11-03 15:27:21" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_E9DADAA0_869F_4fee_AB01_53F8F708DBC8" start="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C" end="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB"/>
+					<ControlFlow xmi:id="EAID_5EF9BD9F_A0F6_4e81_AFC0_1A7A340B9311" start="EAID_18367A7A_3917_455b_957F_2D413FF91C6C" end="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_95DC6850_836D_432a_9767_E0FED941326C" xmi:type="uml:StateNode" name="ActivityFinal" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3522" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="101" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:33:54" modified="2014-11-03 11:33:54" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6296CBC9_768B_4db9_B701_CC506AFF1558" start="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4" end="EAID_95DC6850_836D_432a_9767_E0FED941326C"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_1176643E_51E3_4401_8FD2_21E6C2296493" xmi:type="uml:StateNode" name="Start" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3500" ea_eleType="element"/>
+				<properties isSpecification="false" sType="StateNode" nType="100" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 10:54:38" modified="2014-11-03 10:54:44" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_A9B1BB2D_C249_495c_820D_1C3ED4EBAB7D" start="EAID_1176643E_51E3_4401_8FD2_21E6C2296493" end="EAID_40C76836_9750_4dd7_85EC_125B928FC92F"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881" xmi:type="uml:Synchronization" scope="public">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" tpos="0" ea_localid="3533" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Synchronization" nType="0" scope="public"/>
+				<project author="yv903893" version="1.0" phase="1.0" created="2014-11-03 11:16:18" modified="2014-11-03 11:16:18" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="HovmeollerPlot"/>
+				<links>
+					<ControlFlow xmi:id="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0" start="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881" end="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796"/>
+					<ControlFlow xmi:id="EAID_C187CED6_B6D8_45e2_BC3F_F67C83C3DA40" start="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20" end="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+					<ControlFlow xmi:id="EAID_D0B5EB56_0AA4_4561_9A8E_1E3437E749D0" start="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12" end="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+					<ControlFlow xmi:id="EAID_E56E6DB4_DD06_4793_B1D6_ACCC2220759A" start="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE" end="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881"/>
+				</links>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_FBD60878_C069_4065_ACF9_722E4E4BA2D3">
+				<source xmi:idref="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA">
+					<model ea_localid="3515" type="Activity" name="Calculate Y axis of the returned plot."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62">
+					<model ea_localid="3527" type="Activity" name="Get feature data from the given Hovmoeller feature."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3212"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_72C07FD2_32C3_43bd_9908_CA3653F9BB25">
+				<source xmi:idref="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4">
+					<model ea_localid="3510" type="Activity" name="Calculate the X axis of the returned plot."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA">
+					<model ea_localid="3515" type="Activity" name="Calculate Y axis of the returned plot."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3217"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_07FB27C9_80A9_4e83_9A1F_49826B6D39FE">
+				<source xmi:idref="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003">
+					<model ea_localid="3523" type="Activity" name="Calcualte time gaps between coordinate values on the time axis."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3">
+					<model ea_localid="3512" type="Activity" name="Calculate time gaps between mid positions of coordinate values (Hovmoeller cells) on the time axis."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3216"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_7F2AB43C_42B6_48f0_B4F0_1DE257B3C3C8">
+				<source xmi:idref="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0">
+					<model ea_localid="3504" type="Activity" name="Get the time values on the time axis."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003">
+					<model ea_localid="3523" type="Activity" name="Calcualte time gaps between coordinate values on the time axis."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3227"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_B1A31AE2_1238_4c84_8F6C_4BA7CF6A2D3C">
+				<source xmi:idref="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3">
+					<model ea_localid="3530" type="Activity" name="Calculat the highest common factor of Hovmoeller cells."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_2662BA81_179D_45ab_A676_109433190B38">
+					<model ea_localid="3508" type="Activity" name="Convert the height values of Hovmoeller cells as values which are multiple of their highest common factor."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3219"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_DEA45AA4_882A_47be_8A70_C78813B75A77">
+				<source xmi:idref="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8">
+					<model ea_localid="3528" type="Activity" name="Calculate the exent on Y axis that the plot should cover."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3">
+					<model ea_localid="3530" type="Activity" name="Calculat the highest common factor of Hovmoeller cells."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3206"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_9DC8790C_030F_4a92_A0E1_D2B5346E5A1A">
+				<source xmi:idref="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3">
+					<model ea_localid="3512" type="Activity" name="Calculate time gaps between mid positions of coordinate values (Hovmoeller cells) on the time axis."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8">
+					<model ea_localid="3528" type="Activity" name="Calculate the exent on Y axis that the plot should cover."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3215"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_6A671DF7_40C5_4f73_910A_212B88489CA0">
+				<source xmi:idref="EAID_2662BA81_179D_45ab_A676_109433190B38">
+					<model ea_localid="3508" type="Activity" name="Convert the height values of Hovmoeller cells as values which are multiple of their highest common factor."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_2A96E0CE_C3C6_4647_A3D9_2E71B0FCEB88">
+					<model ea_localid="3509" type="StateNode" name="Finsih."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3221"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_76BF4CEC_45AA_4045_8258_F8E3B0928F21">
+				<source xmi:idref="EAID_2662BA81_179D_45ab_A676_109433190B38">
+					<model ea_localid="3508" type="Activity" name="Convert the height values of Hovmoeller cells as values which are multiple of their highest common factor."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_173B4721_2A2D_4376_8873_28A25118B0DC">
+					<model ea_localid="3502" type="StateNode" name="FlowFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3230"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_AC644B18_B7A9_4e21_88B3_5E0B3F28EE3F">
+				<source xmi:idref="EAID_2662BA81_179D_45ab_A676_109433190B38">
+					<model ea_localid="3508" type="Activity" name="Convert the height values of Hovmoeller cells as values which are multiple of their highest common factor."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_610EACEB_5306_4d0b_9630_7FEA6CBC69E6">
+					<model ea_localid="3517" type="StateNode" name="Finish."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3220"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_28AFA04F_D4BD_4d4b_83BC_558E4334B255">
+				<source xmi:idref="EAID_0AD708A0_702D_4b29_948F_DF00822E1425">
+					<model ea_localid="3498" type="StateNode" name="Start"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0">
+					<model ea_localid="3504" type="Activity" name="Get the time values on the time axis."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3237"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_608A7E90_CD2B_4db0_84E5_AF771502AAAD">
+				<source xmi:idref="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA">
+					<model ea_localid="3534" type="Activity" name="Get the times values on the time axis from the given Hovmoeller feature."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4">
+					<model ea_localid="3510" type="Activity" name="Calculate the X axis of the returned plot."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3218"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_0FB6D418_B4C6_41a6_A99A_5B95EE2D3AD4">
+				<source xmi:idref="EAID_01B991EA_503B_4327_B1E9_9B3659231175">
+					<model ea_localid="3496" type="Activity" name="Calculate distances between line string control points as proportion of whole"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665">
+					<model ea_localid="3526" type="Activity" name="Calculate mid point of each segment"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3241"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_2A3C77D9_54C3_4887_96B3_9B46155AEA42">
+				<source xmi:idref="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9">
+					<model ea_localid="3525" type="StateNode" name="Start"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_01B991EA_503B_4327_B1E9_9B3659231175">
+					<model ea_localid="3496" type="Activity" name="Calculate distances between line string control points as proportion of whole"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3240"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_6DAD3543_D3CE_41ee_9A3A_4DA637245BC9">
+				<source xmi:idref="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E">
+					<model ea_localid="3531" type="Activity" name="Calculate distances between mid points"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA">
+					<model ea_localid="3513" type="Activity" name="Find minimum of the distances"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3214"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_DEAF8C53_8FFA_493f_9436_4C194D46AB14">
+				<source xmi:idref="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665">
+					<model ea_localid="3526" type="Activity" name="Calculate mid point of each segment"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E">
+					<model ea_localid="3531" type="Activity" name="Calculate distances between mid points"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3207"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_9EEF652E_0F70_44ac_8B1E_BE359BB0350F">
+				<source xmi:idref="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA">
+					<model ea_localid="3513" type="Activity" name="Find minimum of the distances"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_224B46A2_C19F_40fe_940C_F981855D042B">
+					<model ea_localid="3505" type="Decision" name="Minimum distance &gt; 0.01"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3226"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_0B02DB44_CECE_4cb7_9735_A75E0A0D3AA5">
+				<source xmi:idref="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC">
+					<model ea_localid="3516" type="Activity" name="Muliply all distances by 10000"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20">
+					<model ea_localid="3507" type="Activity" name="Set tick unit on x axis to 2500"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3223"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_105529C8_D671_4fe0_94FD_01B7E4FFCC5A">
+				<source xmi:idref="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622">
+					<model ea_localid="3521" type="Decision" name="Minimum distance &gt; 0.0001"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC">
+					<model ea_localid="3516" type="Activity" name="Muliply all distances by 10000"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3211"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="Yes"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_B01F81E5_EC60_400c_A15A_79C65AF61522">
+				<source xmi:idref="EAID_85E54EB6_658E_486b_B574_0064BD2617A3">
+					<model ea_localid="3520" type="Activity" name="Multiply all distances by 100"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE">
+					<model ea_localid="3537" type="Activity" name="Set tick unit on x axis to 25"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3208"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_BC924E34_801B_46b7_BFC9_6F0F84D3F93C">
+				<source xmi:idref="EAID_224B46A2_C19F_40fe_940C_F981855D042B">
+					<model ea_localid="3505" type="Decision" name="Minimum distance &gt; 0.01"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_85E54EB6_658E_486b_B574_0064BD2617A3">
+					<model ea_localid="3520" type="Activity" name="Multiply all distances by 100"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3225"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="Yes"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_833FA37E_54B3_47f7_AA45_50986B4B5DC3">
+				<source xmi:idref="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651">
+					<model ea_localid="3535" type="Activity" name="Multiply all distances by 1000"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12">
+					<model ea_localid="3518" type="Activity" name="Set tick unit on x axis to 250"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3210"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_1A1B730E_2ED7_4deb_8803_A677847C1CC5">
+				<source xmi:idref="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402">
+					<model ea_localid="3499" type="Decision" name="Minimum distance &gt;0.001"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651">
+					<model ea_localid="3535" type="Activity" name="Multiply all distances by 1000"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3236"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels rt="Yes"/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_E56E6DB4_DD06_4793_B1D6_ACCC2220759A">
+				<source xmi:idref="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE">
+					<model ea_localid="3537" type="Activity" name="Set tick unit on x axis to 25"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881">
+					<model ea_localid="3533" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3204"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_D0B5EB56_0AA4_4561_9A8E_1E3437E749D0">
+				<source xmi:idref="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12">
+					<model ea_localid="3518" type="Activity" name="Set tick unit on x axis to 250"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881">
+					<model ea_localid="3533" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3209"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_C187CED6_B6D8_45e2_BC3F_F67C83C3DA40">
+				<source xmi:idref="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20">
+					<model ea_localid="3507" type="Activity" name="Set tick unit on x axis to 2500"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881">
+					<model ea_localid="3533" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3222"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0">
+				<source xmi:idref="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881">
+					<model ea_localid="3533" type="Synchronization"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796">
+					<model ea_localid="3506" type="StateNode" name="FlowFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3224"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C">
+				<source xmi:idref="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402">
+					<model ea_localid="3499" type="Decision" name="Minimum distance &gt;0.001"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622">
+					<model ea_localid="3521" type="Decision" name="Minimum distance &gt; 0.0001"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3234"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895">
+				<source xmi:idref="EAID_224B46A2_C19F_40fe_940C_F981855D042B">
+					<model ea_localid="3505" type="Decision" name="Minimum distance &gt; 0.01"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402">
+					<model ea_localid="3499" type="Decision" name="Minimum distance &gt;0.001"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3235"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_6296CBC9_768B_4db9_B701_CC506AFF1558">
+				<source xmi:idref="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4">
+					<model ea_localid="3497" type="Activity" name="Do Plot"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_95DC6850_836D_432a_9767_E0FED941326C">
+					<model ea_localid="3522" type="StateNode" name="ActivityFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3239"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_7FCA13FA_0C23_4f97_AB42_D24246837657">
+				<source xmi:idref="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4">
+					<model ea_localid="3524" type="Activity" name="Generate number axis (x-axis) and date axis (y-axis)."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4">
+					<model ea_localid="3497" type="Activity" name="Do Plot"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3238"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_B4E861D0_8E5D_424d_8A37_BF3BC3C1D880">
+				<source xmi:idref="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7">
+					<model ea_localid="3501" type="Activity" name="Manipulate data reflecting various widths and heights of Hovmoeller cells,"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4">
+					<model ea_localid="3524" type="Activity" name="Generate number axis (x-axis) and date axis (y-axis)."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3231"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_9ECDB863_91C7_439f_900D_0D347D1F53B8">
+				<source xmi:idref="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62">
+					<model ea_localid="3527" type="Activity" name="Get feature data from the given Hovmoeller feature."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7">
+					<model ea_localid="3501" type="Activity" name="Manipulate data reflecting various widths and heights of Hovmoeller cells,"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3232"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_FC1BCFFC_B7BC_407d_A2B0_1CFF89BF1E5E">
+				<source xmi:idref="EAID_40C76836_9750_4dd7_85EC_125B928FC92F">
+					<model ea_localid="3514" type="Activity" name="Get the line string details from the given Hovmoeller feature."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA">
+					<model ea_localid="3534" type="Activity" name="Get the times values on the time axis from the given Hovmoeller feature."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3213"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_A9B1BB2D_C249_495c_820D_1C3ED4EBAB7D">
+				<source xmi:idref="EAID_1176643E_51E3_4401_8FD2_21E6C2296493">
+					<model ea_localid="3500" type="StateNode" name="Start"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_40C76836_9750_4dd7_85EC_125B928FC92F">
+					<model ea_localid="3514" type="Activity" name="Get the line string details from the given Hovmoeller feature."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3233"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_E9DADAA0_869F_4fee_AB01_53F8F708DBC8">
+				<source xmi:idref="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C">
+					<model ea_localid="3532" type="Activity" name="repeat data vertically for multple of units."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB">
+					<model ea_localid="3536" type="StateNode" name="FlowFinal"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3205"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_D76618E9_15A8_4683_9AFE_2F4A4EC0400E">
+				<source xmi:idref="EAID_B2C56715_9098_480f_8858_D3F66F243A41">
+					<model ea_localid="3529" type="StateNode" name="ActivityInitial"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_18367A7A_3917_455b_957F_2D413FF91C6C">
+					<model ea_localid="3503" type="Activity" name="repeat data horizontally  for each unit it has been multplied up to"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3228"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_5EF9BD9F_A0F6_4e81_AFC0_1A7A340B9311">
+				<source xmi:idref="EAID_18367A7A_3917_455b_957F_2D413FF91C6C">
+					<model ea_localid="3503" type="Activity" name="repeat data horizontally  for each unit it has been multplied up to"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C">
+					<model ea_localid="3532" type="Activity" name="repeat data vertically for multple of units."/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="3229"/>
+				<properties ea_type="ControlFlow" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles/>
+		<diagrams>
+			<diagram xmi:id="EAID_B180E473_703F_4937_85BB_7D5886CB4D74">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" localID="201" owner="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43"/>
+				<properties name="HovmeollerPlot" type="Activity"/>
+				<project author="yv903893" version="1.0" created="2014-11-03 10:53:34" modified="2014-11-03 15:46:51"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=1;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="SaveTag=20A3BAE8;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;DefaultLang=;STBLDgm=;ShowNotes=1;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;OverrideLinkedF=0;HideConnStereotype=0;ShowFQN=0;NoFullScope=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=302;Top=474;Right=437;Bottom=549;" subject="EAID_A69E9AF2_6AC4_4294_8994_52076D9C8E62" seqno="1" style="DUID=269B2E79;"/>
+					<element geometry="Left=360;Top=704;Right=495;Bottom=779;" subject="EAID_090BA605_3D16_4aba_ADAB_EF735B0F26E4" seqno="2" style="DUID=AED23E98;"/>
+					<element geometry="Left=586;Top=751;Right=606;Bottom=771;" subject="EAID_95DC6850_836D_432a_9767_E0FED941326C" seqno="3" style="DUID=A6682064;LBL=CX=58:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=158;Top=669;Right=293;Bottom=744;" subject="EAID_9CEF5DCC_CCF6_4b71_9B18_9C8273ECB9D4" seqno="4" style="DUID=8BCA4937;"/>
+					<element geometry="Left=109;Top=549;Right=252;Bottom=624;" subject="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7" seqno="5" style="DUID=78AABCBE;"/>
+					<element geometry="Left=45;Top=419;Right=180;Bottom=494;" subject="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA" seqno="6" style="DUID=FEE7F6C5;"/>
+					<element geometry="Left=46;Top=290;Right=181;Bottom=365;" subject="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4" seqno="7" style="DUID=43E303C8;"/>
+					<element geometry="Left=48;Top=177;Right=159;Bottom=240;" subject="EAID_D9706C8A_7146_48fc_95F7_4895800ABFAA" seqno="8" style="DUID=96FFF0F2;"/>
+					<element geometry="Left=80;Top=95;Right=220;Bottom=145;" subject="EAID_40C76836_9750_4dd7_85EC_125B928FC92F" seqno="9" style="DUID=EC013BEE;"/>
+					<element geometry="Left=89;Top=12;Right=109;Bottom=32;" subject="EAID_1176643E_51E3_4401_8FD2_21E6C2296493" seqno="10" style="DUID=54F94AFF;LBL=CX=22:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_A9B1BB2D_C249_495c_820D_1C3ED4EBAB7D" style="Mode=3;EOID=EC013BEE;SOID=54F94AFF;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_FC1BCFFC_B7BC_407d_A2B0_1CFF89BF1E5E" style="Mode=3;EOID=96FFF0F2;SOID=EC013BEE;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_608A7E90_CD2B_4db0_84E5_AF771502AAAD" style="Mode=3;EOID=43E303C8;SOID=96FFF0F2;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_72C07FD2_32C3_43bd_9908_CA3653F9BB25" style="Mode=3;EOID=FEE7F6C5;SOID=43E303C8;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_FBD60878_C069_4065_ACF9_722E4E4BA2D3" style="Mode=3;EOID=269B2E79;SOID=FEE7F6C5;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_B4E861D0_8E5D_424d_8A37_BF3BC3C1D880" style="Mode=3;EOID=8BCA4937;SOID=78AABCBE;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=-51;SY=-22;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_7FCA13FA_0C23_4f97_AB42_D24246837657" style="Mode=3;EOID=AED23E98;SOID=8BCA4937;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_6296CBC9_768B_4db9_B701_CC506AFF1558" style="Mode=3;EOID=A6682064;SOID=AED23E98;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9ECDB863_91C7_439f_900D_0D347D1F53B8" style="Mode=3;EOID=78AABCBE;SOID=269B2E79;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+			<diagram xmi:id="EAID_DE15CFE4_F7C7_4b32_A950_B83016DBEE39">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" localID="202" owner="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" parent="EAID_2BBA1C79_FEDA_456a_A1A4_7CAC18F173F4"/>
+				<properties name="X axis" type="Activity"/>
+				<project author="yv903893" version="1.0" created="2014-11-03 11:10:51" modified="2014-11-03 12:29:19"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="SaveTag=9A2FB1B0;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;DefaultLang=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;OverrideLinkedF=0;HideConnStereotype=0;ShowFQN=0;NoFullScope=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=260;Top=157;Right=395;Bottom=232;" subject="EAID_380C3BB1_6D2A_4857_9CDE_F7A17658FEBA" seqno="1" style="DUID=DB13973D;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=484;Top=161;Right=619;Bottom=236;" subject="EAID_C6A7C8FB_1B74_4489_9563_5DA7D286782E" seqno="2" style="DUID=7C1B31DF;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=481;Top=30;Right=623;Bottom=105;" subject="EAID_A4980C72_F4C5_4a62_84B9_3C5EFCE5A665" seqno="3" style="DUID=0B97457C;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=258;Top=37;Right=393;Bottom=112;" subject="EAID_01B991EA_503B_4327_B1E9_9B3659231175" seqno="4" style="DUID=0AB3880F;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+					<element geometry="Left=350;Top=880;Right=370;Bottom=900;" subject="EAID_234C794C_E2C8_4f8a_80E3_FD2F9BE71796" seqno="5" style="DUID=9F76B5DA;NSL=0;LBL=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=494;Top=572;Right=629;Bottom=647;" subject="EAID_23892AAD_1E6E_4199_AFEF_CDC5CDBDCF20" seqno="6" style="DUID=0F30F10A;NSL=0;"/>
+					<element geometry="Left=308;Top=571;Right=443;Bottom=646;" subject="EAID_7E5BF7C8_C7C4_445c_AD0A_3852C6EA1E12" seqno="7" style="DUID=7C0CA48D;NSL=0;"/>
+					<element geometry="Left=103;Top=566;Right=238;Bottom=641;" subject="EAID_F75B3E06_C539_441c_B2B2_5456550EC3EE" seqno="8" style="DUID=7B3F9BBD;NSL=0;"/>
+					<element geometry="Left=493;Top=399;Right=628;Bottom=474;" subject="EAID_5135E9A6_12E1_4f35_B0EE_765F6B430DCC" seqno="9" style="DUID=0885537B;NSL=0;"/>
+					<element geometry="Left=344;Top=756;Right=384;Bottom=762;" subject="EAID_D51E261C_DD77_44eb_8A19_DF3C6BF27881" seqno="10" style="DUID=C291264D;NSL=0;"/>
+					<element geometry="Left=547;Top=307;Right=573;Bottom=341;" subject="EAID_8E41D2BB_AA37_4560_B6DD_FAD815785622" seqno="11" style="DUID=F6BA5F06;NSL=0;LBL=CX=84:CY=26:OX=-6:OY=-39:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=367;Top=304;Right=393;Bottom=338;" subject="EAID_10ABC94A_4B1E_484a_B64A_F500906C6402" seqno="12" style="DUID=9B1E9205;NSL=0;LBL=CX=75:CY=26:OX=3:OY=-38:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=312;Top=396;Right=447;Bottom=471;" subject="EAID_DBC75C5B_8F7E_471d_98FC_A547AC533651" seqno="13" style="DUID=57B29488;NSL=0;"/>
+					<element geometry="Left=160;Top=301;Right=186;Bottom=335;" subject="EAID_224B46A2_C19F_40fe_940C_F981855D042B" seqno="14" style="DUID=ED6961AB;NSL=0;LBL=CX=120:CY=13:OX=-94:OY=-22:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=102;Top=391;Right=237;Bottom=466;" subject="EAID_85E54EB6_658E_486b_B574_0064BD2617A3" seqno="15" style="DUID=2FB8C06D;NSL=0;"/>
+					<element geometry="Left=156;Top=29;Right=176;Bottom=49;" subject="EAID_A1F4B495_E8F1_400b_982D_EA4D0DFE38F9" seqno="16" style="DUID=EF0B92DC;NSL=0;LBL=CX=22:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=17:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_105529C8_D671_4fe0_94FD_01B7E4FFCC5A" style="Mode=3;EOID=0885537B;SOID=F6BA5F06;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_6DAD3543_D3CE_41ee_9A3A_4DA637245BC9" style="Mode=3;EOID=DB13973D;SOID=7C1B31DF;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=3;SX=-5;SY=-18;EX=-5;EY=-18;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_DEAF8C53_8FFA_493f_9436_4C194D46AB14" style="Mode=3;EOID=7C1B31DF;SOID=0B97457C;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_0FB6D418_B4C6_41a6_A99A_5B95EE2D3AD4" style="Mode=3;EOID=0B97457C;SOID=0AB3880F;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=3;SX=1;SY=0;EX=2;EY=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C187CED6_B6D8_45e2_BC3F_F67C83C3DA40" style="Mode=3;EOID=C291264D;SOID=0F30F10A;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D0B5EB56_0AA4_4561_9A8E_1E3437E749D0" style="Mode=3;EOID=C291264D;SOID=7C0CA48D;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=3;SX=13;SY=-5;EX=6;EY=-3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E56E6DB4_DD06_4793_B1D6_ACCC2220759A" style="Mode=3;EOID=C291264D;SOID=7B3F9BBD;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9EEF652E_0F70_44ac_8B1E_BE359BB0350F" style="Mode=3;EOID=ED6961AB;SOID=DB13973D;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="EDGE=3;SX=-1;SY=1;EX=-1;EY=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_6821897F_3BCB_462a_AF85_1352361E4FC0" style="Mode=3;EOID=9F76B5DA;SOID=C291264D;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_2A3C77D9_54C3_4887_96B3_9B46155AEA42" style="Mode=3;EOID=0AB3880F;SOID=EF0B92DC;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_87F400B3_C6CD_4982_B9FB_929FD81BE16C" style="Mode=3;EOID=F6BA5F06;SOID=9B1E9205;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=17:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_1A1B730E_2ED7_4deb_8803_A677847C1CC5" style="Mode=3;EOID=57B29488;SOID=9B1E9205;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_833FA37E_54B3_47f7_AA45_50986B4B5DC3" style="Mode=3;EOID=7C0CA48D;SOID=57B29488;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=17:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_BC924E34_801B_46b7_BFC9_6F0F84D3F93C" style="Mode=3;EOID=2FB8C06D;SOID=ED6961AB;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_4FF12D71_8B82_44fd_AA4C_DA8706F2D895" style="Mode=3;EOID=9B1E9205;SOID=ED6961AB;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_B01F81E5_EC60_400c_A15A_79C65AF61522" style="Mode=3;EOID=7B3F9BBD;SOID=2FB8C06D;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_0B02DB44_CECE_4cb7_9735_A75E0A0D3AA5" style="Mode=3;EOID=0F30F10A;SOID=0885537B;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+			<diagram xmi:id="EAID_1CC103E2_850E_4a8a_A39D_08CB3ABAF7F4">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" localID="203" owner="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" parent="EAID_4DC23A3C_F8BD_4b50_9694_E996359088EA"/>
+				<properties name="Calculate Y axis" type="Activity"/>
+				<project author="yv903893" version="1.0" created="2014-11-03 11:25:00" modified="2014-11-03 15:48:10"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="SaveTag=D5C3CC5A;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;DefaultLang=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;OverrideLinkedF=0;HideConnStereotype=0;ShowFQN=0;NoFullScope=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=538;Top=348;Right=673;Bottom=423;" subject="EAID_377A0AAA_A493_43b5_B7DC_6B740B9FF6A3" seqno="1" style="DUID=4E0AFAE8;"/>
+					<element geometry="Left=317;Top=800;Right=337;Bottom=820;" subject="EAID_173B4721_2A2D_4376_8873_28A25118B0DC" seqno="2" style="DUID=1AA3A6E3;LBL=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=254;Top=662;Right=389;Bottom=737;" subject="EAID_2662BA81_179D_45ab_A676_109433190B38" seqno="3" style="DUID=7980F490;"/>
+					<element geometry="Left=255;Top=532;Right=390;Bottom=607;" subject="EAID_BBD799F2_1572_4a74_8792_D29006B67DA3" seqno="4" style="DUID=A0F1B64E;"/>
+					<element geometry="Left=248;Top=399;Right=383;Bottom=474;" subject="EAID_B0E33209_C1DA_4084_8039_5FF7AC8EA8F8" seqno="5" style="DUID=0F4599F2;"/>
+					<element geometry="Left=244;Top=261;Right=395;Bottom=336;" subject="EAID_9C4D925D_7C0D_4b26_B2C3_CB4C704F8003" seqno="6" style="DUID=83D227E5;"/>
+					<element geometry="Left=248;Top=145;Right=383;Bottom=196;" subject="EAID_220D0AED_D912_49f1_8AC8_B566A04AA7E0" seqno="7" style="DUID=D454ADA5;"/>
+					<element geometry="Left=305;Top=57;Right=325;Bottom=77;" subject="EAID_0AD708A0_702D_4b29_948F_DF00822E1425" seqno="8" style="DUID=757B7AB6;LBL=CX=22:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_28AFA04F_D4BD_4d4b_83BC_558E4334B255" style="Mode=3;EOID=D454ADA5;SOID=757B7AB6;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_7F2AB43C_42B6_48f0_B4F0_1DE257B3C3C8" style="Mode=3;EOID=83D227E5;SOID=D454ADA5;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_07FB27C9_80A9_4e83_9A1F_49826B6D39FE" style="Mode=3;EOID=4E0AFAE8;SOID=83D227E5;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_DEA45AA4_882A_47be_8A70_C78813B75A77" style="Mode=3;EOID=A0F1B64E;SOID=0F4599F2;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_B1A31AE2_1238_4c84_8F6C_4BA7CF6A2D3C" style="Mode=3;EOID=7980F490;SOID=A0F1B64E;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_76BF4CEC_45AA_4045_8258_F8E3B0928F21" style="Mode=3;EOID=1AA3A6E3;SOID=7980F490;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9DC8790C_030F_4a92_A0E1_D2B5346E5A1A" style="Mode=3;EOID=0F4599F2;SOID=4E0AFAE8;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+			<diagram xmi:id="EAID_49C4A1DD_B3C0_4467_B6A4_9980B32CE8B7">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" localID="204" owner="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" parent="EAID_16B56605_6632_4120_8BE6_1B09B91A0EA7"/>
+				<properties name="Manipulate data" type="Activity"/>
+				<project author="yv903893" version="1.0" created="2014-11-03 11:28:18" modified="2014-11-03 11:32:41"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="SaveTag=7ED15A81;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;DefaultLang=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;OverrideLinkedF=0;HideConnStereotype=0;ShowFQN=0;NoFullScope=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=301;Top=589;Right=321;Bottom=609;" subject="EAID_EE2AF798_D25B_4f4c_BFAA_E5166214C7BB" seqno="1" style="DUID=0F5A350B;LBL=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=250;Top=377;Right=385;Bottom=452;" subject="EAID_D3373E8C_C38E_4e2f_BAB4_EE89552F3E9C" seqno="2" style="DUID=584E0489;"/>
+					<element geometry="Left=244;Top=241;Right=386;Bottom=316;" subject="EAID_18367A7A_3917_455b_957F_2D413FF91C6C" seqno="3" style="DUID=850A2FFE;"/>
+					<element geometry="Left=289;Top=91;Right=309;Bottom=111;" subject="EAID_B2C56715_9098_480f_8858_D3F66F243A41" seqno="4" style="DUID=97310185;LBL=CX=61:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:ALT=0:ROT=0;"/>
+					<element geometry="Left=106;Top=172;Right=525;Bottom=494;" subject="EAID_81BE1E6F_D8F7_4fdf_9B3D_423B5E06429A" seqno="5" style="DUID=8DD13794;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D76618E9_15A8_4683_9AFE_2F4A4EC0400E" style="Mode=3;EOID=850A2FFE;SOID=97310185;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_5EF9BD9F_A0F6_4e81_AFC0_1A7A340B9311" style="Mode=3;EOID=584E0489;SOID=850A2FFE;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E9DADAA0_869F_4fee_AB01_53F8F708DBC8" style="Mode=3;EOID=0F5A350B;SOID=584E0489;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+			<diagram xmi:id="EAID_E03A8F51_E4F9_4f64_B3CD_9F5F4ED354E6">
+				<model package="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" localID="205" owner="EAPK_E4DD5EFE_127A_4244_95C9_22739098CF43" parent="EAID_2C737D42_9035_4f48_9D0F_D79CB58FC93F"/>
+				<properties name="GetDat" type="Activity"/>
+				<project author="yv903893" version="1.0" created="2014-11-03 12:05:30" modified="2014-11-03 12:05:30"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=791;DocSize.cy=1134;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="SaveTag=CD70577F;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=0;MatrixActive=0;SwimlanesActive=1;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;DefaultLang=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;OverrideLinkedF=0;HideConnStereotype=0;ShowFQN=0;NoFullScope=0;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=1;ufh=0;cls=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>
